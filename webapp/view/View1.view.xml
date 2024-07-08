@@ -1,0 +1,73 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"  
+     xmlns="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+    height="100%">
+    <m:Page id="page" title="{i18n>title}">
+	<m:IconTabBar
+                            id="idIconTabBarNoIcons"
+                       
+                            class="sapUiResponsiveContentPadding">
+		<m:items>
+			<m:IconTabFilter   key="info" text="SAP HANA Mara">
+<m:VBox >
+	<Table
+    id="1"
+				rows="{odataModel>/results}"
+				selectionMode="MultiToggle"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar id="2" style="Clear">
+						<m:Title id="title" text="List of Materials"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column id="3" width="11rem">
+						<m:Label id="4" text="Material" />
+						<template>
+							<m:Text id="Matnr" text="{odataModel>Matnr}" wrapping="false" />
+						</template>
+					</Column>
+					<Column id="6" width="11rem">
+						<m:Label id="7" text="Created by" />
+						<template>
+							<m:Text id="Ernam" text="{odataModel>Ernam}" />
+						</template>
+					</Column>
+                    <Column id="6s" width="11rem">
+						<m:Label id="s7" text="Base Unit of Measure" />
+						<template>
+							<m:Text id="Meins" text="{odataModel>Meins}"/>
+						</template>
+					</Column>
+                     <Column id="6zs" width="11rem">
+						<m:Label id="sz7" text="Industry Sector" />
+						<template>
+							<m:Text id="Mbrsh" text="{odataModel>Mbrsh}"/>
+						</template>
+					</Column>
+                     <Column id="6szs" width="11rem">
+						<m:Label id="szs7" text="Material type" />
+						<template>
+							<m:Text id="Mtart" text="{odataModel>Mtart}"/>
+						</template>
+					</Column>
+				</columns>
+			</Table>
+		<m:Button text="Send to Cloud database" press="onPress" />
+
+				<m:Button text="Get User" press="getUser" />
+
+</m:VBox>
+</m:IconTabFilter>
+	<m:IconTabFilter text="Cloud Database" >
+	
+	</m:IconTabFilter>
+	</m:items>
+	</m:IconTabBar>
+
+    </m:Page>
+</mvc:View>

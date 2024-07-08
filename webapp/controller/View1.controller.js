@@ -38,21 +38,43 @@ sap.ui.define([
             },
             onPress: function (){
                 var data = JSON.stringify({
-                    "Material_Type": "amal",
-                    "Industry_sector": "amal",
-                    "Material": "amal",
-                    "Created_by": "amal",
-                    "Base_Unit": "amal"
+                    
+                        "SNDPOR": "string",
+                        "MESTYP": "string",
+                        "BEGIN": "string",
+                        "RCVPOR": "string",
+                        "MANDT": "string",
+                        "SEGMENT_1": "string",
+                        "EDI_DC40": "string",
+                        "SEGMENT_3": "string",
+                        "SEGMENT_2": "string",
+                        "MTART": "string",
+                        "E1MARAM": "string",
+                        "id": 4000,
+                        "DIRECT": "string",
+                        "MATNR": "string",
+                        "ERNAM": "string",
+                        "RCVPRN": "string",
+                        "E1MAKTM": "string",
+                        "SNDPRT": "string",
+                        "RCVPRT": "string",
+                        "MEINS": "string",
+                        "SNDPRN": "string",
+                        "MBRSH": "string",
+                        "TABNAM": "string",
+                        "IDOCTYP": "string",
+                        "CONTAINER": "string"
+                      
                   })
                 $.ajax({
                     type: 'POST',
                     xhrFields: {
                         withCredentials: true
                     },
-                     url: "https://f7b751cbtrial.it-cpitrial05-rt.cfapps.us10-001.hana.ondemand.com/http/externalCloud",
+                     url: "https://14385865trial.it-cpitrial05-rt.cfapps.us10-001.hana.ondemand.com/http/post",
                      data : data ,
                       contentType : 'application/json',
-                      Authorization : "Basic"+"pVe6lDVFxTPSk9if7u35xG5kwnwNvExB"+":"+"Do6YdDAViKpIyMpi"                     ,
+                      Authorization : "Basic"+"sb-f9872ca1-dea0-4c2c-8a9a-b07a310044b4!b297017|it-rt-14385865trial!b26655"+":"+"123469a4-0bf1-4529-9c08-6b7c28adb98d$Rk2yuWaqM_uaQd-28Cr34wpYW1GEQlbOe18D0DfN2Yo="                     ,
                     success: function(data){
                          console.log(data);
                      },
@@ -62,52 +84,6 @@ sap.ui.define([
  
                     })
                     
-                },
-                     
-
-        
-                getOAuthToken: function () {
-                    var sTokenUrl = 'https://afv2dhxzl.trial-accounts.ondemand.com/api/oauth2/v2.0/token'; // Replace with your OAuth token URL
-                    var sClientId = '787c1340-89b4-4caa-adb6-ba413393ec69'; // Replace with your client ID
-                    var sClientSecret = 'ToEPZi5xejcmu5:CN0_eTsY3Xl7R9h78'; // Replace with your client secret
-        
-                    return new Promise((resolve, reject) => {
-                        $.ajax({
-                            url: sTokenUrl,
-                            type: "POST",
-                            data: {
-                                'grant_type': 'client_credentials'
-                            },
-                            headers: {
-                                "Authorization": "Basic " + btoa(sClientId + ":" + sClientSecret),
-                                "Content-Type": "application/x-www-form-urlencoded"
-                            },
-                            success: function (oData) {
-                                resolve(oData.access_token);
-                            },
-                            error: function (oXHR, sStatus, sError) {
-                                reject(sError);
-                            }
-                        });
-                    });
-                },
-        
-                getUsers: function (sToken) {
-                    var sBaseUrl = 'https://afv2dhxzl.trial-accounts.ondemand.com/scim/v2';
-        
-                    $.ajax({
-                        url: sBaseUrl + "/Users",
-                        type: "GET",
-                        headers: {
-                            "Content-Type": "application/scim+json",
-                            "Accept": "application/scim+json",
-                            "Authorization": "Bearer " + sToken
-                        },
-                        success: function (oData) {
-                            console.log(JSON.stringify(oData, null, 4));
-                        }
-                      
-                    });
                 }
             });
         });

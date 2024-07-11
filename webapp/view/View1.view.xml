@@ -59,7 +59,6 @@
 			</Table>
 		<m:Button text="Send to Cloud database" press="onPress" />
 
-				<m:Button text="Get User" press="getUser" />
 
 </m:VBox>
 </m:IconTabFilter>

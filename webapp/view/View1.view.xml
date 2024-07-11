@@ -14,45 +14,45 @@
 			<m:IconTabFilter   key="info" text="SAP HANA Mara">
 <m:VBox >
 	<Table
-    id="1"
+    
 				rows="{odataModel>/results}"
 				selectionMode="MultiToggle"
 				paste="onPaste"
 				ariaLabelledBy="title">
 				<extension>
-					<m:OverflowToolbar id="2" style="Clear">
-						<m:Title id="title" text="List of Materials"/>
+					<m:OverflowToolbar  style="Clear">
+						<m:Title  text="List of Materials"/>
 					</m:OverflowToolbar>
 				</extension>
 				<columns>
-					<Column id="3" width="11rem">
-						<m:Label id="4" text="Material" />
+					<Column  width="11rem">
+						<m:Label  text="Material" />
 						<template>
-							<m:Text id="Matnr" text="{odataModel>Matnr}" wrapping="false" />
+							<m:Text  text="{odataModel>Matnr}" wrapping="false" />
 						</template>
 					</Column>
-					<Column id="6" width="11rem">
-						<m:Label id="7" text="Created by" />
+					<Column  width="11rem">
+						<m:Label  text="Created by" />
 						<template>
-							<m:Text id="Ernam" text="{odataModel>Ernam}" />
+							<m:Text text="{odataModel>Ernam}" />
 						</template>
 					</Column>
-                    <Column id="6s" width="11rem">
-						<m:Label id="s7" text="Base Unit of Measure" />
+                    <Column  width="11rem">
+						<m:Label  text="Base Unit of Measure" />
 						<template>
-							<m:Text id="Meins" text="{odataModel>Meins}"/>
+							<m:Text  text="{odataModel>Meins}"/>
 						</template>
 					</Column>
-                     <Column id="6zs" width="11rem">
-						<m:Label id="sz7" text="Industry Sector" />
+                     <Column  width="11rem">
+						<m:Label  text="Industry Sector" />
 						<template>
-							<m:Text id="Mbrsh" text="{odataModel>Mbrsh}"/>
+							<m:Text  text="{odataModel>Mbrsh}"/>
 						</template>
 					</Column>
-                     <Column id="6szs" width="11rem">
-						<m:Label id="szs7" text="Material type" />
+                     <Column  width="11rem">
+						<m:Label text="Material type" />
 						<template>
-							<m:Text id="Mtart" text="{odataModel>Mtart}"/>
+							<m:Text text="{odataModel>Mtart}"/>
 						</template>
 					</Column>
 				</columns>
@@ -64,9 +64,229 @@
 </m:IconTabFilter>
 	<m:IconTabFilter text="Cloud Database" >
 	
+	<m:VBox >
+	<Table id="table"
+    
+				rows="{dataModel>/items}"
+				selectionMode="MultiToggle"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title  text="List of Materials"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column  width="11rem">
+						<m:Label  text="SNDPOR" />
+						<template>
+							<m:Text  text="{dataModel>SNDPOR}" wrapping="false" />
+						</template>
+					</Column>
+					<Column  width="11rem">
+						<m:Label  text="MESTYP" />
+						<template>
+							<m:Text  text="{dataModel>MESTYP}" />
+						</template>
+					</Column>
+
+					<Column  width="11rem">
+						<m:Label  text="BEGIN" />
+						<template>
+							<m:Text  text="{dataModel>BEGIN}" />
+						</template>
+					</Column>
+					<Column  width="11rem">
+						<m:Label  text="RCVPOR" />
+						<template>
+							<m:Text  text="{dataModel>RCVPOR}" />
+						</template>
+					</Column>
+
+					<Column  width="11rem">
+						<m:Label  text="MANDT" />
+						<template>
+							<m:Text  text="{dataModel>MANDT}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="SEGMENT_1" />
+						<template>
+							<m:Text  text="{dataModel>SEGMENT_1}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="EDI_DC40" />
+						<template>
+							<m:Text  text="{dataModel>EDI_DC40}" />
+						</template>
+					</Column>
+					
+<Column  width="11rem">
+						<m:Label  text="SEGMENT_3" />
+						<template>
+							<m:Text  text="{dataModel>SEGMENT_3}" />
+						</template>
+					</Column>
+					
+<Column  width="11rem">
+						<m:Label  text="SEGMENT_2" />
+						<template>
+							<m:Text  text="{dataModel>SEGMENT_2}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="MTART" />
+						<template>
+							<m:Text  text="{dataModel>MTART}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="E1MARAM" />
+						<template>
+							<m:Text  text="{dataModel>E1MARAM}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="DIRECT" />
+						<template>
+							<m:Text  text="{dataModel>DIRECT}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="MATNR" />
+						<template>
+							<m:Text  text="{dataModel>MATNR}" />
+						</template>
+					</Column>
+
+					
+<Column  width="11rem">
+						<m:Label  text="ERNAM" />
+						<template>
+							<m:Text  text="{dataModel>ERNAM}" />
+						</template>
+					</Column>
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="RCVPRN" />
+						<template>
+							<m:Text  text="{dataModel>RCVPRN}" />
+						</template>
+					</Column>
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="E1MAKTM" />
+						<template>
+							<m:Text  text="{dataModel>E1MAKTM}" />
+						</template>
+					</Column>
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="SNDPRT" />
+						<template>
+							<m:Text  text="{dataModel>SNDPRT}" />
+						</template>
+					</Column>
+
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="RCVPRT" />
+						<template>
+							<m:Text  text="{dataModel>RCVPRT}" />
+						</template>
+					</Column>
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="MEINS" />
+						<template>
+							<m:Text  text="{dataModel>MEINS}" />
+						</template>
+					</Column>
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="SNDPRN" />
+						<template>
+							<m:Text  text="{dataModel>SNDPRN}" />
+						</template>
+					</Column>
+
+
+
+					
+<Column  width="11rem">
+						<m:Label  text="MBRSH" />
+						<template>
+							<m:Text  text="{dataModel>MBRSH}" />
+						</template>
+					</Column>
+
+
+	
+<Column  width="11rem">
+						<m:Label  text="TABNAM" />
+						<template>
+							<m:Text  text="{dataModel>TABNAM}" />
+						</template>
+					</Column>
+
+
+
+						
+<Column  width="11rem">
+						<m:Label  text="IDOCTYP" />
+						<template>
+							<m:Text  text="{dataModel>IDOCTYP}" />
+						</template>
+					</Column>
+
+
+						
+<Column  width="11rem">
+						<m:Label  text="CONTAINER" />
+						<template>
+							<m:Text  text="{dataModel>CONTAINER}" />
+						</template>
+					</Column>
+					</columns>
+	</Table>
+					<m:Button text="FETCH DATA FROM DB" press="onClick" />
+
+				<m:Button text="Send to SAP S/4HANA" press="onPress_s4h" />
+
+	</m:VBox>
+
+
 	</m:IconTabFilter>
 	</m:items>
 	</m:IconTabBar>
 
     </m:Page>
 </mvc:View>
+
+
+                        

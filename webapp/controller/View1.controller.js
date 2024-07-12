@@ -65,12 +65,36 @@ sap.ui.define([
                 
                 
         // get selected data  => dynamic
-                var data;
-    
+        var data = JSON.stringify({
+            "SNDPOR": "SAPAQE",
+            "MESTYP": "MATMAS",
+            "BEGIN": "1",
+            "RCVPOR": "CPI",
+            "MANDT": "400",
+            "SEGMENT_1": "1",
+            "EDI_DC40": "string",
+            "SEGMENT_3": "1",
+            "SEGMENT_2": "1",
+            "MTART": "FERT",
+            "E1MARAM": "string",
+            "DIRECT": "1",
+            "MATNR": "000000000000001132",
+            "ERNAM": "string",
+            "RCVPRN": "S4HANATOCP",
+            "E1MAKTM": "string",
+            "SNDPRT": "LS CPI",
+            "RCVPRT": "LS CPI",
+            "MEINS": "string",
+            "SNDPRN": "AQE_SENDER",
+            "MBRSH": "M",
+            "TABNAM": "EDI_DC40",
+            "IDOCTYP": "MATMAS05",
+            "CONTAINER": "string"
+          })    
 
     $.ajax({
         type: 'POST',
-         url: "",
+         url: "https://14385865trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com:443/14385865trial/v1/s4h",
          data : data,
           contentType : 'application/json',
            Authorization : `Basic sb-f1802272-ccd0-41e5-9df4-e79403f0c99a!b297017|it!b26655:351e9efe-8bf5-4bee-8172-51b67b2f99f6$_xv2TgE8YPiJePwC2nvErf9YLRziE4P7CBMYi8ooIFE=`,
@@ -128,45 +152,45 @@ sap.ui.define([
 
         //test
                 var data = JSON.stringify({
-                        "SNDPOR": "string",
-                        "MESTYP": "string",
-                        "BEGIN": "string",
-                        "RCVPOR": "string",
-                        "MANDT": "string",
-                        "SEGMENT_1": "string",
-                        "EDI_DC40": "string",
-                        "SEGMENT_3": "string",
-                        "SEGMENT_2": "string",
-                        "MTART": "string",
-                        "E1MARAM": "string",
-                        "DIRECT": "string",
-                        "MATNR": "string",
-                        "ERNAM": "string",
-                        "RCVPRN": "string",
-                        "E1MAKTM": "string",
-                        "SNDPRT": "string",
-                        "RCVPRT": "string",
-                        "MEINS": "string",
-                        "SNDPRN": "string",
-                        "MBRSH": "string",
-                        "TABNAM": "string",
-                        "IDOCTYP": "string",
-                        "CONTAINER": "string"   
+                    "SNDPOR": "SAPAQE",
+                    "MESTYP": "MATMAS",
+                    "BEGIN": "1",
+                    "RCVPOR": "CPI",
+                    "MANDT": "400",
+                    "SEGMENT_1": "1",
+                    "EDI_DC40": "string",
+                    "SEGMENT_3": "1",
+                    "SEGMENT_2": "1",
+                    "MTART": "FERT",
+                    "E1MARAM": "string",
+                    "DIRECT": "1",
+                    "MATNR": "000000000000001132",
+                    "ERNAM": "string",
+                    "RCVPRN": "S4HANATOCP",
+                    "E1MAKTM": "string",
+                    "SNDPRT": "LS CPI",
+                    "RCVPRT": "LS CPI",
+                    "MEINS": "string",
+                    "SNDPRN": "AQE_SENDER",
+                    "MBRSH": "M",
+                    "TABNAM": "EDI_DC40",
+                    "IDOCTYP": "MATMAS05",
+                    "CONTAINER": "string"
                   })
                    var oTable = this.byId("tabs"); 
                    var aContexts = oTable.getBinding("rows").getContexts();
                    var aData = aContexts.map(function (oContext) {
                        return oContext.getObject();
                    });
-                   console.log(JSON.stringify(aData));
+                   //console.log(JSON.stringify(aData));
                    console.log(aData);
-                   console.log(aData[5]);
-         var i;
-         for ( var i=0; i< aData.length ; i++){
+                   console.log(JSON.stringify(aData[5]));
+         //var i;
+        // for ( var i=0; i< aData.length ; i++){
                 $.ajax({
                     type: 'POST',
                      url: "https://14385865trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com:443/14385865trial/v1/post",
-                     data : aData[i],
+                     data : JSON.stringify(aData[5]),
                     contentType : 'application/json',
                        Authorization : `Basic sb-f1802272-ccd0-41e5-9df4-e79403f0c99a!b297017|it!b26655:351e9efe-8bf5-4bee-8172-51b67b2f99f6$_xv2TgE8YPiJePwC2nvErf9YLRziE4P7CBMYi8ooIFE=`,
                     success: function(data){
@@ -176,7 +200,7 @@ sap.ui.define([
                     console.log(oError);
                      }
                     })
-                }
+               // }
                 }
             });
         });

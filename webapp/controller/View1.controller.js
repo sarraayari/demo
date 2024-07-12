@@ -113,22 +113,21 @@ sap.ui.define([
 
             })
 },
-extractTableDataToJSON: function (){
-    var oTable = this.byId("table"); 
-    var aContexts = oTable.getBinding("rows").getContexts();
-    var aData = aContexts.map(function (oContext) {
-        return oContext.getObject();
-    });
+// extractTableDataToJSON: function (){
+//     var oTable = this.byId("table"); 
+//     var aContexts = oTable.getBinding("rows").getContexts();
+//     var aData = aContexts.map(function (oContext) {
+//         return oContext.getObject();
+//     });
 
-    console.log(JSON.stringify(aData));
-    return aData;
-},
+//     console.log(JSON.stringify(aData));
+//     return aData;
+
             onPress: function (){
                
 
         //test
                 var data = JSON.stringify({
-                    
                         "SNDPOR": "string",
                         "MESTYP": "string",
                         "BEGIN": "string",
@@ -152,29 +151,23 @@ extractTableDataToJSON: function (){
                         "MBRSH": "string",
                         "TABNAM": "string",
                         "IDOCTYP": "string",
-                        "CONTAINER": "string"
-                      
+                        "CONTAINER": "string"   
                   })
-                  var oTable = this.byId("table"); 
-                  var aContexts = oTable.getBinding("rows").getContexts();
-                  var aData = aContexts.map(function (oContext) {
-                      return oContext.getObject();
-                  });
-                  console.log(JSON.stringify(aData));
-
-
-
-                  var container = JSON.stringify(aData);
-        var i;
-        for ( i of container){}
-                    var jsonObject = i;
-                    console.log(jsonObject);
-
+                   var oTable = this.byId("tabs"); 
+                   var aContexts = oTable.getBinding("rows").getContexts();
+                   var aData = aContexts.map(function (oContext) {
+                       return oContext.getObject();
+                   });
+                   console.log(JSON.stringify(aData));
+                   console.log(aData);
+                   console.log(aData[5]);
+         var i;
+         for ( var i=0; i< aData.length ; i++){
                 $.ajax({
                     type: 'POST',
                      url: "https://14385865trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com:443/14385865trial/v1/post",
-                     data : jsonObject,
-                      contentType : 'application/json',
+                     data : aData[i],
+                    contentType : 'application/json',
                        Authorization : `Basic sb-f1802272-ccd0-41e5-9df4-e79403f0c99a!b297017|it!b26655:351e9efe-8bf5-4bee-8172-51b67b2f99f6$_xv2TgE8YPiJePwC2nvErf9YLRziE4P7CBMYi8ooIFE=`,
                     success: function(data){
                          console.log(data);
@@ -182,10 +175,8 @@ extractTableDataToJSON: function (){
                      error: function(oError){
                     console.log(oError);
                      }
- 
                     })
                 }
-                    
-                
+                }
             });
         });

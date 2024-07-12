@@ -13,7 +13,7 @@
 		<m:items>
 			<m:IconTabFilter   key="info" text="SAP HANA Mara">
 <m:VBox >
-	<Table
+	<Table id="tab"
     
 				rows="{odataModel>/results}"
 				selectionMode="MultiToggle"
@@ -65,7 +65,7 @@
 	<m:IconTabFilter text="Cloud Database" >
 	
 	<m:VBox >
-	<Table id="table"
+	<Table id="tabs"
     
 				rows="{dataModel>/items}"
 				selectionMode="MultiToggle"

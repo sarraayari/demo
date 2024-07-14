@@ -1,1 +1,5 @@
-/* Enter your custom styles here */
+.customButton {
+    margin-left: 200px; /* Ajustez la marge selon vos besoins */
+    margin-right: 10px; /* Ajustez la marge selon vos besoins */
+    width: auto; /* Ajustez la largeur selon vos besoins */
+}

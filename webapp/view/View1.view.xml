@@ -1,83 +1,88 @@
 <mvc:View controllerName="project1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"  
-     xmlns="sap.ui.table"
-	xmlns:u="sap.ui.unified"
-	xmlns:c="sap.ui.core"
-	xmlns:m="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.ui.table"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
     height="100%">
-    <m:Page id="page" title="{i18n>title}">
-	<m:IconTabBar
-                            id="idIconTabBarNoIcons"
-                       
-                            class="sapUiResponsiveContentPadding">
-		<m:items>
-			<m:IconTabFilter   key="info" text="SAP HANA Mara">
-<m:VBox >
-	<Table id="tab"
-    
-				rows="{odataModel>/results}"
-				selectionMode="MultiToggle"
-				paste="onPaste"
-				ariaLabelledBy="title">
-				<extension>
-					<m:OverflowToolbar  style="Clear">
-						<m:Title  text="List of Materials"/>
-					</m:OverflowToolbar>
-				</extension>
-				<columns>
-					<Column  width="11rem">
-						<m:Label  text="Material" />
-						<template>
-							<m:Text  text="{odataModel>Matnr}" wrapping="false" />
-						</template>
-					</Column>
-					<Column  width="11rem">
-						<m:Label  text="Created by" />
-						<template>
-							<m:Text text="{odataModel>Ernam}" />
-						</template>
-					</Column>
-                    <Column  width="11rem">
-						<m:Label  text="Base Unit of Measure" />
-						<template>
-							<m:Text  text="{odataModel>Meins}"/>
-						</template>
-					</Column>
-                     <Column  width="11rem">
-						<m:Label  text="Industry Sector" />
-						<template>
-							<m:Text  text="{odataModel>Mbrsh}"/>
-						</template>
-					</Column>
-                     <Column  width="11rem">
-						<m:Label text="Material type" />
-						<template>
-							<m:Text text="{odataModel>Mtart}"/>
-						</template>
-					</Column>
-				</columns>
-			</Table>
-		<m:Button text="Send to Cloud database" press="onPress" />
-
-
-</m:VBox>
-</m:IconTabFilter>
-	<m:IconTabFilter text="Cloud Database" >
-	
-	<m:VBox >
-	<Table id="tabs"
-    
-				rows="{dataModel>/items}"
-				selectionMode="MultiToggle"
-				paste="onPaste"
-				ariaLabelledBy="title">
-				<extension>
-					<m:OverflowToolbar style="Clear">
-						<m:Title  text="List of Materials"/>
-					</m:OverflowToolbar>
-				</extension>
-				<columns>
-					<Column  width="11rem">
+    <m:Page id="page" title="Watermelon Integration Application">
+        <m:VBox>
+            <m:HBox class="header-icons" width="100%" justifyContent="SpaceBetween">
+                <m:VBox class="left-icon" alignItems="Center">
+                    <m:Image src="./images/melon1.png" width="150px" height="100px" alt="Melon Logo"/>
+                </m:VBox>
+                <m:VBox class="right-icon" alignItems="Center">
+                    <m:Image src="./images/kl.png" width="170px" height="100px" alt="Aymax Logo"/>
+					
+                </m:VBox>
+            </m:HBox>
+            <m:IconTabBar id="idIconTabBarNoIcons" class="sapUiResponsiveContentPadding">
+                <m:items>
+                    <m:IconTabFilter key="info" text="SAP HANA Mara">
+                        <m:VBox>
+                            <Table id="tab"
+                                rows="{odataModel>/results}"
+                                selectionMode="MultiToggle"
+                                paste="onPaste"
+                                ariaLabelledBy="title">
+                                <extension>
+                                    <m:OverflowToolbar style="Clear">
+                                        <m:Title text="List of Materials"/>
+                                    </m:OverflowToolbar>
+                                </extension>
+                                <columns>
+                                    <Column width="11rem">
+                                        <m:Label text="Material" />
+                                        <template>
+                                            <m:Text text="{odataModel>Matnr}" wrapping="false" />
+                                        </template>
+                                    </Column>
+                                    <Column width="11rem">
+                                        <m:Label text="Created by" />
+                                        <template>
+                                            <m:Text text="{odataModel>Ernam}" />
+                                        </template>
+                                    </Column>
+                                    <Column width="11rem">
+                                        <m:Label text="Base Unit of Measure" />
+                                        <template>
+                                            <m:Text text="{odataModel>Meins}" />
+                                        </template>
+                                    </Column>
+                                    <Column width="11rem">
+                                        <m:Label text="Industry Sector" />
+                                        <template>
+                                            <m:Text text="{odataModel>Mbrsh}" />
+                                        </template>
+                                    </Column>
+                                    <Column width="11rem">
+                                        <m:Label text="Material type" />
+                                        <template>
+                                            <m:Text text="{odataModel>Mtart}" />
+                                        </template>
+                                    </Column>
+                                </columns>
+                            </Table>
+                            <m:HBox justifyContent="Center" width="100%">
+                                <m:ToolbarSpacer width="3px"/> 
+                                <m:Button text="Send" press="onPress" class="customButton"  />
+                            </m:HBox>
+                        </m:VBox>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter text="Cloud Database">
+                        <m:VBox>
+                            <Table id="tabs"
+                                rows="{dataModel>/items}"
+                                selectionMode="MultiToggle"
+                                paste="onPaste"
+                                ariaLabelledBy="title">
+                                <extension>
+                                    <m:OverflowToolbar style="Clear">
+                                        <m:Title text="List of Materials"/>
+                                    </m:OverflowToolbar>
+                                </extension>
+                                <columns>
+<Column  width="11rem">
 						<m:Label  text="SNDPOR" />
 						<template>
 							<m:Text  text="{dataModel>SNDPOR}" wrapping="false" />
@@ -272,21 +277,22 @@
 							<m:Text  text="{dataModel>CONTAINER}" />
 						</template>
 					</Column>
-					</columns>
-	</Table>
-					<m:Button text="FETCH DATA FROM DB" press="onClick" />
-
-				<m:Button text="Send to SAP S/4HANA" press="onPress_s4h" />
-
-	</m:VBox>
 
 
-	</m:IconTabFilter>
-	</m:items>
-	</m:IconTabBar>
 
+
+
+                                </columns>
+                            </Table>
+                            <m:HBox justifyContent="Center" width="100%">
+                                <m:Button text="Fetch data" press="onClick" class="customButton" />
+                                <m:Button text="Send" press="onPress_s4h" class="customButton" />
+                             
+                            </m:HBox>
+                        </m:VBox>
+                    </m:IconTabFilter>
+                </m:items>
+            </m:IconTabBar>
+        </m:VBox>
     </m:Page>
 </mvc:View>
-
-
-                        

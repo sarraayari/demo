@@ -13,7 +13,8 @@
                 </m:VBox>
                 <m:VBox class="right-icon" alignItems="Center">
                     <m:Image src="./images/kl.png" width="170px" height="100px" alt="Aymax Logo"/>
-					
+		                    <m:Text text="Siesta Team" wrapping="false" />
+
                 </m:VBox>
             </m:HBox>
             <m:IconTabBar id="idIconTabBarNoIcons" class="sapUiResponsiveContentPadding">
@@ -277,10 +278,6 @@
 							<m:Text  text="{dataModel>CONTAINER}" />
 						</template>
 					</Column>
-
-
-
-
 
                                 </columns>
                             </Table>

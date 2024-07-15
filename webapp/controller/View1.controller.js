@@ -137,15 +137,7 @@ sap.ui.define([
 
             })
 },
-// extractTableDataToJSON: function (){
-//     var oTable = this.byId("table"); 
-//     var aContexts = oTable.getBinding("rows").getContexts();
-//     var aData = aContexts.map(function (oContext) {
-//         return oContext.getObject();
-//     });
 
-//     console.log(JSON.stringify(aData));
-//     return aData;
 
             onPress: function (){
                

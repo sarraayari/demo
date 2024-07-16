@@ -57,7 +57,32 @@ sap.ui.define([
 
             })
 
-            },
+            },onPress2: function () {
+                
+                
+                // get selected data  => dynamic
+                var data = JSON.stringify({
+                    "ZNAME": "SAPAQE",
+                    "ZNBR": "MATMAS"
+                  })    
+        
+            $.ajax({
+                type: 'POST',
+                 url: "",
+                 data : data,
+                  contentType : 'application/json',
+                   Authorization : `Basic sb-f1802272-ccd0-41e5-9df4-e79403f0c99a!b297017|it!b26655:351e9efe-8bf5-4bee-8172-51b67b2f99f6$_xv2TgE8YPiJePwC2nvErf9YLRziE4P7CBMYi8ooIFE=`,
+                success: function(data){
+                     console.log(data);
+                 },
+                 error: function(oError){
+                console.log(oError);
+                 }
+        
+                })
+        
+                        
+                    },
 
 
 
@@ -94,7 +119,7 @@ sap.ui.define([
 
     $.ajax({
         type: 'POST',
-         url: "https://14385865trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com:443/14385865trial/v1/s4h",
+         url: "https://14385865trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com:443/14385865trial/s4hana",
          data : data,
           contentType : 'application/json',
            Authorization : `Basic sb-f1802272-ccd0-41e5-9df4-e79403f0c99a!b297017|it!b26655:351e9efe-8bf5-4bee-8172-51b67b2f99f6$_xv2TgE8YPiJePwC2nvErf9YLRziE4P7CBMYi8ooIFE=`,
@@ -108,7 +133,31 @@ sap.ui.define([
         })
 
                 
-            },    
+            },  
+            onClick2: function () {
+
+                var oData = new JSONModel();
+                var that = this;
+    
+            $.ajax({
+                type: 'GET',
+                url: "https://14385865trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com:443/14385865trial/ZPFE",
+                contentType : 'application/json',
+                Authorization : `Basic sb-f1802272-ccd0-41e5-9df4-e79403f0c99a!b297017|it!b26655:351e9efe-8bf5-4bee-8172-51b67b2f99f6$_xv2TgE8YPiJePwC2nvErf9YLRziE4P7CBMYi8ooIFE=`,
+                success: function(data){
+                    console.log(data);
+                     // Set the retrieved data to the JSONModel
+                     oData.setData({ items: data });
+    
+                     // Bind the model to the table
+                     that.getView().setModel(oData, "dataModel");
+                },
+                error: function(oError){
+                console.log(oError);
+                }
+    
+                })
+    },  
 
 
 
@@ -140,9 +189,6 @@ sap.ui.define([
 
 
             onPress: function (){
-               
-
-        //test
                 var data = JSON.stringify({
                     "SNDPOR": "SAPAQE",
                     "MESTYP": "MATMAS",

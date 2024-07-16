@@ -25,7 +25,9 @@
                                 rows="{odataModel>/results}"
                                 selectionMode="MultiToggle"
                                 paste="onPaste"
-                                ariaLabelledBy="title">
+                                ariaLabelledBy="title"
+                                class="centeredTable"
+                                >
                                 <extension>
                                     <m:OverflowToolbar style="Clear">
                                         <m:Title text="List of Materials"/>
@@ -76,7 +78,8 @@
                                 rows="{dataModel>/items}"
                                 selectionMode="MultiToggle"
                                 paste="onPaste"
-                                ariaLabelledBy="title">
+                                ariaLabelledBy="title"
+                                class="tabs">
                                 <extension>
                                     <m:OverflowToolbar style="Clear">
                                         <m:Title text="List of Materials"/>
@@ -285,6 +288,42 @@
                                 <m:Button text="Fetch data" press="onClick" class="customButton" />
                                 <m:Button text="Send" press="onPress_s4h" class="customButton" />
                              
+                            </m:HBox>
+                        </m:VBox>
+                    </m:IconTabFilter>
+
+					<m:IconTabFilter key="info" text="ZPFE">
+                        <m:VBox>
+                            <Table id="tab2"
+                                rows="{oData>/results}"
+                                selectionMode="MultiToggle"
+                                paste="onPaste"
+                                ariaLabelledBy="title"
+                                class="tab2">
+                                <extension>
+                                    <m:OverflowToolbar style="Clear">
+                                        <m:Title text="List of ZPFE"/>
+                                    </m:OverflowToolbar>
+                                </extension>
+                                <columns>
+                                    <Column width="11rem">
+                                        <m:Label text="ZNAME" />
+                                        <template>
+                                            <m:Text text="{oData>ZNAME}" wrapping="false" />
+                                        </template>
+                                    </Column>
+                                    <Column width="11rem">
+                                        <m:Label text="ZNBR" />
+                                        <template>
+                                            <m:Text text="{oData>ZNBR}" />
+                                        </template>
+                                    </Column>
+                                </columns>
+                            </Table>
+                            <m:HBox justifyContent="Center" width="100%">
+                             <m:ToolbarSpacer width="3px"/> 
+              <m:Button text="fetch data" press="onClick2" class="customButton"  />
+                                <m:Button text="SLT" press="onPress2" class="customButton"  />
                             </m:HBox>
                         </m:VBox>
                     </m:IconTabFilter>

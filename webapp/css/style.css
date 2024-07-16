@@ -3,3 +3,94 @@
     margin-right: 10px; /* Ajustez la marge selon vos besoins */
     width: auto; /* Ajustez la largeur selon vos besoins */
 }
+
+
+.centeredTable {
+    margin: 0 auto; /* Center the table horizontally */
+    max-width: 49%; /* Optional: limit the maximum width */
+    border-collapse: collapse; /* Merge table borders */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.centeredTable .sapUiTableCell {
+    padding: 10px; /* Add padding to cells */
+    border-bottom: 1px solid #ddd; /* Add a bottom border to cells */
+}
+
+.centeredTable .sapUiTableHeaderCell {
+    background-color: #c5c8c5; /* Header background color */
+    color: white; /* Header text color */
+    padding: 12px; /* Add padding to header cells */
+    border-bottom: 2px solid #ddd; /* Add a bottom border to header cells */
+}
+
+.centeredTable .sapUiTableRowEven {
+    background-color: #f2f2f2; /* Background color for even rows */
+}
+
+.centeredTable .sapUiTableRowOdd {
+    background-color: #fff; /* Background color for odd rows */
+}
+
+
+
+
+.tabs {
+    margin: 0 auto; /* Center the table horizontally */
+    max-width: 100%; /* Optional: limit the maximum width */
+    border-collapse: collapse; /* Merge table borders */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.tabs .sapUiTableCell {
+    padding: 10px; /* Add padding to cells */
+    border-bottom: 1px solid #ddd; /* Add a bottom border to cells */
+}
+
+.tabs .sapUiTableHeaderCell {
+    background-color: #c5c8c5; /* Header background color */
+    color: white; /* Header text color */
+    padding: 12px; /* Add padding to header cells */
+    border-bottom: 2px solid #ddd; /* Add a bottom border to header cells */
+}
+
+.tabs .sapUiTableRowEven {
+    background-color: #f2f2f2; /* Background color for even rows */
+}
+
+.tabs .sapUiTableRowOdd {
+    background-color: #fff; /* Background color for odd rows */
+}
+
+
+
+
+.tab2 {
+    margin: 0 auto; /* Center the table horizontally */
+    max-width: 20%; /* Optional: limit the maximum width */
+    border-collapse: collapse; /* Merge table borders */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.tab2 .sapUiTableCell {
+    padding: 10px; /* Add padding to cells */
+    border-bottom: 1px solid #ddd; /* Add a bottom border to cells */
+}
+
+.tab2 .sapUiTableHeaderCell {
+    background-color: #c5c8c5; /* Header background color */
+    color: white; /* Header text color */
+    padding: 12px; /* Add padding to header cells */
+    border-bottom: 2px solid #ddd; /* Add a bottom border to header cells */
+}
+
+.tab2 .sapUiTableRowEven {
+    background-color: #f2f2f2; /* Background color for even rows */
+}
+
+.tab2 .sapUiTableRowOdd {
+    background-color: #fff; /* Background color for odd rows */
+}

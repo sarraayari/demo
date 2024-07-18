@@ -8,25 +8,27 @@
     border-radius: 10px !important;
     cursor: pointer !important;
     text-align: center !important; 
- 
+   margin: 0 10px;
 
     }
     .customButton .sapMBtnInner {
+       
         background-color: green !important;
         color: rgb(253, 248, 248) !important;
         border: none !important;
         padding: 3px 45px !important;
-    font-size: 20px !important;
-    border-radius: 10px !important;
+        font-size: 20px !important;
+        border-radius: 10px !important;
         cursor: pointer !important;
         text-align: center !important; /* Centrer le texte */
+        margin: 0 10px;
+    }
     
-        }
         
 
         .centeredTable {
-            margin: 20px auto; /* Center the table horizontally and add some top margin */
-            max-width: 72%; /* Increase the maximum width */
+            margin: 70px auto; /* Center the table horizontally and add some top margin */
+            max-width: 100%; /* Increase the maximum width */
             border-collapse: collapse; /* Merge table borders */
             background-color: #fff; /* White background color */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a more prominent shadow */

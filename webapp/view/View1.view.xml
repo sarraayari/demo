@@ -65,7 +65,7 @@
                                     </Column>
                                 </columns>
                             </Table>
-                            <m:HBox justifyContent="Center" width="100%">
+                             <m:HBox justifyContent="Center" width="100%">
                                 <m:ToolbarSpacer width="3px"/> 
                                 <m:Button text="Send Data" press="onPress" class="customButton1"  />
                             </m:HBox>
@@ -283,7 +283,8 @@
 
                                 </columns>
                             </Table>
-                            <m:HBox justifyContent="SpaceBetween" width="100%">
+                             <m:HBox justifyContent="Center" width="100%" >
+                      
         <m:Button text="Fetch Data" press="onClick" class="customButton"/>
         <m:Button text="Send Data " press="onPress_s4h" class="customButton"/>
     </m:HBox>
@@ -320,10 +321,11 @@
                             </Table>
                             <m:HBox justifyContent="Center" width="100%">
                              <m:ToolbarSpacer width="3px"/> 
-          <m:HBox justifyContent="SpaceBetween" width="100%">
-    <m:Button text="fetch Data" press="onClick2" class="customButton" />
-    <m:Button text="Send SLT" press="onPress2" class="customButton" />
-</m:HBox>
+     <m:HBox justifyContent="Center" width="70%" >
+    <m:Button text="Fetch Data" press="onClick2" class="customButton" />
+       <m:Button text="Send To SLT" press="onPress2" class="customButton" />
+ </m:HBox>
+
 
                             </m:HBox>
                         </m:VBox>

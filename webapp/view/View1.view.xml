@@ -7,19 +7,18 @@
     height="100%">
     <m:Page id="page" title="Watermelon Integration Application">
         <m:VBox>
-            <m:HBox class="header-icons" width="100%" justifyContent="SpaceBetween">
+           <m:HBox class="header-icons" width="100%" justifyContent="SpaceBetween" alignItems="Center">
                 <m:VBox class="left-icon" alignItems="Center">
                     <m:Image src="./images/melon1.png" width="150px" height="100px" alt="Melon Logo"/>
                 </m:VBox>
                 <m:VBox class="right-icon" alignItems="Center">
                     <m:Image src="./images/kl.png" width="170px" height="100px" alt="Aymax Logo"/>
-		                    <m:Text text="Siesta Team" wrapping="false" />
-
+                    <m:Text text="Siesta Team" wrapping="false" />
                 </m:VBox>
             </m:HBox>
             <m:IconTabBar id="idIconTabBarNoIcons" class="sapUiResponsiveContentPadding">
                 <m:items>
-                    <m:IconTabFilter key="info" text="SAP HANA Mara">
+                    <m:IconTabFilter key="info" text="Exchange Material HANA To Cloud">
                         <m:VBox>
                             <Table id="tab"
                                 rows="{odataModel>/results}"
@@ -68,11 +67,11 @@
                             </Table>
                             <m:HBox justifyContent="Center" width="100%">
                                 <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Send" press="onPress" class="customButton"  />
+                                <m:Button text="Send Data" press="onPress" class="customButton1"  />
                             </m:HBox>
                         </m:VBox>
                     </m:IconTabFilter>
-                    <m:IconTabFilter text="Cloud Database">
+                    <m:IconTabFilter text="Exchange Material From Cloud To HANA">
                         <m:VBox>
                             <Table id="tabs"
                                 rows="{dataModel>/items}"
@@ -284,15 +283,14 @@
 
                                 </columns>
                             </Table>
-                            <m:HBox justifyContent="Center" width="100%">
-                                <m:Button text="Fetch data" press="onClick" class="customButton" />
-                                <m:Button text="Send" press="onPress_s4h" class="customButton" />
-                             
-                            </m:HBox>
+                            <m:HBox justifyContent="SpaceBetween" width="100%">
+        <m:Button text="Fetch Data" press="onClick" class="customButton"/>
+        <m:Button text="Send Data " press="onPress_s4h" class="customButton"/>
+    </m:HBox>
                         </m:VBox>
                     </m:IconTabFilter>
 
-					<m:IconTabFilter key="info" text="ZPFE">
+					<m:IconTabFilter key="info" text="Replication Customizing Data">
                         <m:VBox>
                             <Table id="tab2"
                                 rows="{oData>/results}"
@@ -302,18 +300,18 @@
                                 class="tab2">
                                 <extension>
                                     <m:OverflowToolbar style="Clear">
-                                        <m:Title text="List of ZPFE"/>
+                                        <m:Title text="List of Consultants"/>
                                     </m:OverflowToolbar>
                                 </extension>
                                 <columns>
                                     <Column width="11rem">
-                                        <m:Label text="ZNAME" />
+                                        <m:Label text="NAME" />
                                         <template>
                                             <m:Text text="{oData>ZNAME}" wrapping="false" />
                                         </template>
                                     </Column>
                                     <Column width="11rem">
-                                        <m:Label text="ZNBR" />
+                                        <m:Label text="NUMBER" />
                                         <template>
                                             <m:Text text="{oData>ZNBR}" />
                                         </template>
@@ -322,8 +320,11 @@
                             </Table>
                             <m:HBox justifyContent="Center" width="100%">
                              <m:ToolbarSpacer width="3px"/> 
-              <m:Button text="fetch data" press="onClick2" class="customButton"  />
-                                <m:Button text="SLT" press="onPress2" class="customButton"  />
+          <m:HBox justifyContent="SpaceBetween" width="100%">
+    <m:Button text="fetch Data" press="onClick2" class="customButton" />
+    <m:Button text="Send SLT" press="onPress2" class="customButton" />
+</m:HBox>
+
                             </m:HBox>
                         </m:VBox>
                     </m:IconTabFilter>
